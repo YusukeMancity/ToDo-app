@@ -10,13 +10,24 @@ html
       .social
         =link_to image_tag("Twitter_Social_Icon_Circle_Color.png", size: "40x40", id: "twitter_logo") , "https://twitter.com/tanisuke_city17"
         =link_to image_tag("GitHub-Mark-64px.png",size: "40x40", id: "github_logo"), "https://github.com/YusukeMancity"  
-    #wrap
-      .content
+    .content
+      h1 Task List
+      table border="3" bordercolor="#00bfff" width="40%"
+        thead
+          tr
+            th Task Name
+          tr
+        tbody
+          - @tasks.each do |t|
+            tr
+              td = t.task 
         
 
 
     footer
       small Created by Yusuke Hanatani
+
+      
 
 
 
