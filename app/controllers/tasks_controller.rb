@@ -8,8 +8,17 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.create(task_params)
+    redirect_to tasks_path
   end
 
   def destroy
   end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:task)
+  end
+
 end

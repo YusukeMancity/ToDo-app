@@ -12,6 +12,8 @@ html
         =link_to image_tag("GitHub-Mark-64px.png",size: "40x40", id: "github_logo"), "https://github.com/YusukeMancity"  
     .content
       h1 Task List
+      h3
+        = link_to "Create new task", new_task_path
       table border="3" bordercolor="#00bfff" width="40%"
         thead
           tr
