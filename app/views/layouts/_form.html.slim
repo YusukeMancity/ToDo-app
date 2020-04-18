@@ -1,0 +1,6 @@
+.form
+  = form_with model: @task do |f|
+    = f.label :task 
+    = f.text_field :task
+    = f.submit
+= link_to "BACK" , tasks_path
